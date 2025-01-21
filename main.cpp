@@ -9,7 +9,7 @@ int main() {
 
     std::vector<Job> jobs(numJobs);
 
-    // Take input for each job
+    
     for (int i = 0; i < numJobs; ++i) {
         std::cout << "Enter job " << i + 1 << " details:\n";
         std::cout << "ID: ";
@@ -20,12 +20,12 @@ int main() {
         std::cin >> jobs[i].profit;
     }
 
-    // Call the job scheduling function
+
     auto result = jobScheduling(jobs);
     int maxProfit = result.first;
     auto scheduledJobs = result.second;
 
-    // Output maximum profit and scheduled jobs
+    
     std::cout << "Maximum Profit: " << maxProfit << "\n";
     std::cout << "Scheduled Jobs: ";
     for (const auto &job : scheduledJobs) {
@@ -33,7 +33,7 @@ int main() {
     }
     std::cout << "\n";
 
-    // Simple Gantt chart visualization (text-based)
+    
     std::cout << "Gantt Chart:\n";
     for (int i = 0; i < scheduledJobs.size(); ++i) {
         std::cout << "| " << scheduledJobs[i].id << " ";
